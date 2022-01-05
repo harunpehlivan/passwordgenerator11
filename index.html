@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+	<div class="password-field">
+		<div id="password" class="output">hello you!</div>
+		<span class="button copy" data-clipboard-action="copy" data-clipboard-target="#password">Copy*</span>
+	</div>
+	<div class="widget text">
+		<label class="mr-1rem">Number of characters</label>
+		<input type="number" name="pwLength" value="12">
+	</div>
+	<div class="widget checkbox">
+		<fieldset>
+			<legend>Settings</legend>
+			<span>
+				<input type="checkbox" name="bigLetters" id="bigLetters" checked>
+				<label for="bigLetters">use uppercase letters</label>
+			</span>
+			<span>
+				<input type="checkbox" name="numbers" id="numbers" checked>
+				<label for="numbers">use numbers</label>
+			</span>
+			<span class="with-info">
+				<input type="checkbox" name="signs"  id="signs" checked>
+				<label  for="signs">use special characters</label>
+			</span>
+			<span>
+				<input type="checkbox" name="split"  id="split">
+				<label  for="split">splite password after every 4th character with a dash</label>
+			</span>
+		</fieldset>
+	</div>
+	<div class="widget submit">
+		<input class="copy" type="submit" value="Generate*" data-clipboard-action="copy" data-clipboard-target="#password">
+		<p class="small">* The password will be copied in your clipboard after clicking on <strong>Generate</strong> button or <strong>Copy</strong> button on top.</p>
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
